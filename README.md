@@ -51,6 +51,8 @@ The plots representing the difference in  number of infected individuals is give
 
 .. image:: _images/hello01.png
 
+The X-axis represents teh time in hours and the Y-axis represents the Total Infected Individuals. As can be seen, for``Strategy0``, the total number of Infected Individuals is around ``5700`` while for ``Strategy1`` because Susceptibility drops down to ``0``, the Infected Individuals remains constant to ``1100`` after some time units.
+
 ## Authors
 * Radhiya A. Arsekar
 * Durga Keerthi Mandarapu
