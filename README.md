@@ -14,8 +14,7 @@ After downloading so, please Install the following packages and libraries by com
  
     $ sudo pip install xlrd
 
-    Note::
-   Windows users can omit ``sudo`` at the start of the command.
+###### Note:: Windows users can omit ``sudo`` at the start of the command.
 
 ## Running 
 
@@ -49,7 +48,7 @@ The above table reprents two strategies with header row value representing the d
 
 The plots representing the difference in  number of infected individuals is given as follows:
 
-![alt text](https://github.com/radh3110/EpiDemoSim-Project/blob/master/chnages.png "Plots showing Difference between two Strategies")
+![alt text](https://github.com/radh3110/EpiDemoSim-Project/blob/master/plot.png "Plots showing Difference between two Strategies")
 
 
 The X-axis represents teh time in hours and the Y-axis represents the Total Infected Individuals. As can be seen, for``Strategy0``, the total number of Infected Individuals is around ``5700`` while for ``Strategy1`` because Susceptibility drops down to ``0``, the Infected Individuals remains constant to ``1100`` after some time units.
