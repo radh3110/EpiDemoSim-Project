@@ -1,0 +1,154 @@
+#This file provides explanation for the input file 
+
+
+2 3 4 #powers for people in awareness level zero, one and two respectively.
+
+
+0.80 #susceptibility value for people in awareness level zero
+0.50 #susceptibility value for people in awareness level one
+0.30 #susceptibility value for people in awareness level two
+
+
+#below is a cost matrix
+#for people in awareness level zero:
+7.00  #cost per individual to reduce susceptibility from s to zero
+6.00  #cost per individual to reduce susceptibility from s to s/3
+5.00  #cost per individual to reduce susceptibility from s to 2s/3
+
+#for people in awareness level one:
+5.00  #cost per individual to reduce susceptibility from s to zero
+4.00  #cost per individual to reduce susceptibility from s to s/3
+3.00  #cost per individual to reduce susceptibility from s to 2s/3
+
+#for people in awareness level two:
+3.00  #cost per individual to reduce susceptibility from s to zero
+2.00  #cost per individual to reduce susceptibility from s to s/3
+1.00  #cost per individual to reduce susceptibility from s to 2s/3
+
+
+#As can be seen below, they are the probability values
+#I have described here, only for one strategy how it works.
+#Rest all being the same.
+#The fourth value ie the value of person remaning at susceptibility 's' is calculated directly by subtracting from 1 the sum of probabilities in one row.
+#As seen in strategy S0, since all three values in a row are zero, Probability of remaining at Susceptibility 's' even after delay is 1.
+
+Strategy S0
+#For awareness Level Zero:
+0.00 #probability of an individual to reduce susceptibility from 's' to zero
+0.00 #probability of an individual to reduce susceptibility from 's' to s/3
+0.00 #probability of an individual to reduce susceptibility from 's' to 2s/3
+
+For awareness Level One:
+0.00 #probability of an individual to reduce susceptibility from 's' to zero
+0.00 #probability of an individual to reduce susceptibility from 's' to s/3
+0.00 #probability of an individual to reduce susceptibility from 's' to 2s/3
+
+For awareness Level Two:
+0.00 #probability of an individual to reduce susceptibility from 's' to zero
+0.00 #probability of an individual to reduce susceptibility from 's' to s/3
+0.00 #probability of an individual to reduce susceptibility from 's' to 2s/3
+
+Delay for Strategy S0
+70 #The time after which government would start implementing the strategy after it comes to notice of authorities.
+
+
+Strategy S1
+0.40
+0.20
+0.20
+
+0.20
+0.20
+0.40
+
+0.20
+0.20
+0.40
+
+Delay for S1
+70
+
+
+Strategy S2
+0.20
+0.20
+0.40
+
+0.40
+0.20
+0.20
+
+0.20
+0.20
+0.40
+
+Delay for S2
+70
+
+
+Strategy S3
+0.20
+0.20
+0.40
+
+0.20
+0.20
+0.40
+
+0.40
+0.20
+0.20
+
+Delay for S3
+70
+
+
+Strategy S4
+0.00
+0.00
+1.00
+
+0.00
+0.00
+1.00
+
+0.00
+0.00
+1.00
+
+Delay for S4
+70
+
+
+Strategy  S5
+0.00
+1.00
+0.00
+
+0.00
+1.00
+0.00
+
+0.00
+1.00
+0.00
+
+Delay for S5
+70
+
+
+Strategy S6
+1.00
+0.00
+0.00
+
+1.00
+0.00
+0.00
+
+1.00
+0.00
+0.00
+
+Delay for S6
+70
