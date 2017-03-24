@@ -1,5 +1,5 @@
 # EpiDemoSim
-EpiDemoSim is a tool  designed to help control and arrive at conclusions when dealing with epidemics in Urban area. Here, Urban area refers to area wherein there live two classes of people, those who live in Slum area where facilities, even basic ones, are lacking  and Upmarket Area where most of the facilities are readily available.  There is movement of people from one Region to another, main reason of it being employment. The people living in Slum are not mostly concerned or even educated when it comes to knowing that they have an infection. So if an infection starts spreading in such Urban Scenario, how  will it  progress and how should government tackle this problem with varying strategies  is what this model depicts.
+EpiDemoSim is a tool  designed to help control and arrive at conclusions when dealing with epidemics in Urban area. Here, Urban area refers to area wherein there live two classes of people, those who live in Slum area where facilities, even basic ones, are lacking  and Upmarket Area where most of the facilities are readily available.  There is movement of people from one Region to another, mainly because of employment. The people living in Slum are not mostly concerned or even educated when it comes to knowing that they have an infection. So if an infection starts spreading in such Urban Scenario, how  will it  progress and how should government tackle this problem with varying strategies  is what this model depicts.
 
 
 ## Prerequisites
@@ -19,17 +19,17 @@ After downloading so, please Install the following packages and libraries by com
 ## Running 
 
 As can be seen, the project comprises of a number of python files. I shall briefly describe important files from them:
-1) ``cost.py``: This file calculates the total cost whic is associated with the lowering of susceptibility at each awareness levels.
+1) ``cost.py``: This file calculates the total cost which is associated with the lowering of susceptibility at each awareness level.
 
-2) ``infecting.py``: Calculates the number infected and exposed agents
+2) ``infecting.py``: Calculates the number infected and exposed agents.
 
-3) ``infectionProbability.py``: Calculates the probability to get infected for a susceptible individual
+3) ``infectionProbability.py``: Calculates the probability to get infected for a susceptible individual.
 
-4) ``recovery.py``: Calculates the number of recovered and removed agents
+4) ``recovery.py``: Calculates the number of recovered and removed agents.
 
 5) ``strategy.py`` : Defines the main procedure for the simulation we are running.
 
-6) ``suscep.py`` : Calculates the number of people who lowered their susceptibilities
+6) ``suscep.py`` : Calculates the number of people who lowered their susceptibilities.
 
 7) ``main.py`` : The main file to run the simulation.
 
@@ -37,21 +37,21 @@ The ``input.txt`` file takes the input from user. The ``Explanation for Input Fi
 The code can be modified as to meet your requirements.
 
 ## Running a Sample Program
-With an initial Susceptibility of 0.8 for People in awareness level 0, 0.5 for people in awareness Level one and 0.3 for people in Awareness Level two, we are displaying results of two strategies here: 
+With an initial Susceptibility of 0.8 for People in Awareness Level 0, 0.5 for people in Awareness Level one and 0.3 for people in Awareness Level two, we are displaying results of two strategies here: 
 
 | Strategies | 0   | s/3  | 2s/3 | s | Delay
 | -----------|:---:| ----:|----:|----:|----:|
 | Strategy0  | 0 | 1 | 0 | 0 | 70 |
 | Strategy1  | 1 | 0 | 0 | 0 | 70 |
 
-The above table reprents two strategies with header row value representing the drop in susceptibility i.e. from  ``s`` it will either drop down to  ``0`` ,  ``s/3`` ,  ``2s/3``  or will remain at  ``s`` . The Delay column represents the time delay after which the government will start taking appropriate measures. The column entries represent the probability values with which the susceptibility will drop down to ie for Strategy1 with probability 1 the susceptibility will drop down to  ``0`` from ``s`` after delay. Currently, for this table, the Strategies for people in varying awareness levels is same. It cane be different across all three awareness levels. Detailed description is given in code.
+The above table reprents two strategies with header row value representing the drop in susceptibility i.e. from  ``s`` it will either drop down to  ``0`` ,  ``s/3`` ,  ``2s/3``  or will remain at  ``s`` . The Delay column represents the time delay after which the government will start taking appropriate measures. The column entries represent the probability values with which the susceptibility will drop down to i.e. for Strategy1 with probability 1 the susceptibility will drop down to  ``0`` from ``s`` after delay. Currently, for this table, the Strategies for people in varying awareness levels is same. It can be different across all three awareness levels. Detailed description is given in code.
 
-The plots representing the difference in  number of infected individuals is given as follows:
+The plots representing the difference in the number of infected individuals is given as follows:
 
 ![alt text](https://github.com/radh3110/EpiDemoSim-Project/blob/master/plot.png "Plots showing Difference between two Strategies")
 
 
-The X-axis represents teh time in hours and the Y-axis represents the Total Infected Individuals. As can be seen, for``Strategy0``, the total number of Infected Individuals is around ``5700`` while for ``Strategy1`` because Susceptibility drops down to ``0``, the Infected Individuals remains constant to ``1100`` after some time units.
+The X-axis represents the time in hours and the Y-axis represents the Total Infected Individuals. As can be seen, for``Strategy0``, the total number of Infected Individuals is around ``5700`` while for ``Strategy1`` because Susceptibility drops down to ``0``, the Infected Individuals remains constant to ``1100`` after some time units.
 
 ## Authors
 * Radhiya A. Arsekar
