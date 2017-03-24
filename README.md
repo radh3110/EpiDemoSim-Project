@@ -49,8 +49,7 @@ The above table reprents two strategies with header row value representing the d
 
 The plots representing the difference in  number of infected individuals is given as follows:
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/radh3110/EpiDemoSim-Project/chnages.png "Plots showing Difference between two Strategies")
 
 
 The X-axis represents teh time in hours and the Y-axis represents the Total Infected Individuals. As can be seen, for``Strategy0``, the total number of Infected Individuals is around ``5700`` while for ``Strategy1`` because Susceptibility drops down to ``0``, the Infected Individuals remains constant to ``1100`` after some time units.
