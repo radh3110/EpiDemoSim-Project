@@ -17,41 +17,41 @@ After downloading so, please Install the following packages and libraries by com
 .. Note::
    Windows users can omit ``sudo`` at the start of the command.
 
-## Installing
+## Running 
 
-As can be seen, the project comprises of a number of python files. I shall briefly describe each of them:
-1) cost.py :
-This file calculates the total cost whic is associated with the lowering of susceptibility at each awareness levels.
+As can be seen, the project comprises of a number of python files. I shall briefly describe important files from them:
+1) ``cost.py``: This file calculates the total cost whic is associated with the lowering of susceptibility at each awareness levels.
 
-2) gotohospi.py and gotomarket.py:
-   These files are associated with agents going to hospital and market when the constraints are satisfied.
+2) ``infecting.py``: Calculates the number infected and exposed agents
 
-3) home_work_coordinates.py and movingpeople.py:
-home_work_coordinates assigns home and work coordinates to agents and  movingpeople.py controls their movement to work places and within the specified place as well.
+3) ``infectionProbability.py``: Calculates the probability to get infected for a susceptible individual
 
-4) infecting.py
-Calculates the number infected and exposed agents
+4) ``recovery.py``: Calculates the number of recovered and removed agents
 
-5) infectionProbability.py
-calculates the probability to get infected for a susceptible individual
+5) ``strategy.py`` : Defines the main procedure for the simulation we are running.
 
-6) recovery.py
-Calculates the number of recovered and removed agents
+6) ``suscep.py`` : Calculates the number of people who lowered their susceptibilities
 
-7) strategy.py
-Defines the main procedure for the simulation we are running.
+7) ``main.py`` : The main file to run the simulation.
 
-8) suscep.py
-Calculates the number of people who lowered their susceptibilities
+The ``input.txt`` file takes the input from user. The ``Explanation for Input File`` describes what should be the input and what it means. Kindly go through the same.
+The code can be modified as to meet your requirements.
 
-9) variables.py and initialise.py
-Defines variables and properties for agent and initialises them.
+## Running a Sample Program
+With an initial Susceptibility of 0.8 for People in awareness level 0, 0.5 for people in awareness Level one and 0.3 for people in Awareness Level two, we are displaying results of two strategies here: 
 
-10) plotting.py
-Associated with plotting and writing the data to excel spreadsheet
+| Strategies | 0   | s/3  | 2s/3 | s | Delay
+| -----------|:---:| ----:|----:|----:|----:|
+| Strategy0  | 0 | 1 | 0 | 0 | 70 |
+| Strategy1  | 1 | 0 | 0 | 0 | 70 |
 
-11) main.py
-The main file to run the simulation.
+The above table reprents two strategies with header row value representing the drop in susceptibility i.e. from  ``s`` it will either drop down to  ``0`` ,  ``s/3`` ,  ``2s/3``  or will remain at  ``s`` . The Delay column represents the time delay after which the government will start taking appropriate measures. The column entries represent the probability values with which the susceptibility will drop down to ie for Strategy1 with probability 1 the susceptibility will drop down to  ``0`` from ``s`` after delay. Currently, for this table, the Strategies for people in varying awareness levels is same. It cane be different across all three awareness levels. Detailed description is given in code.
 
+The plots representing the difference in  number of infected individuals is given as follows:
 
+.. image:: _images/hello01.png
 
+## Authors
+* Radhiya A. Arsekar
+* Durga Keerthi Mandarapu
+* M.V. Panduranga Rao
