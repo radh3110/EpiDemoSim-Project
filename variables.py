@@ -62,6 +62,7 @@ costs = [[0 for k in range(length)] for v in range(3)]    #cost matrix
 lowered = [[0 for k in range(length)] for v in range(3)]  #suceptibility lowered people in each awareness level
 power = [0 for v in range(3)]                             #power matrix
 sus = [0 for v in range(3)]                               #suceptibility input matrix
+delay = [0 for v in range(3)]                             #delay input matrix
 #since here we re considering 3 levels ie awareness levels, the value of 'v' in the matrix formation is considered to be in range(3)
 
 
