@@ -166,9 +166,6 @@ def strat(plottype, delay, number):
     print "After all iterations, number of recovered people: ", recoveredtemp
     print "number of people went to market: ", peopleinmarket
     print "number of people went to hospitals: ", peopleH
-    #print "After all iterations, number of succeptibility lowered people: ", takencare
-    #print "After all iterations, number of vaccinated people: ", vaccinated
-    #print "After all iterations, number of removed people: ",removedtemp
 
     #pl.show()
 
