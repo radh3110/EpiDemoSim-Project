@@ -44,7 +44,7 @@ With an initial Susceptibility of 0.8 for People in Awareness Level 0, 0.5 for p
 | Strategy0  | 0 | 1, 80 | 0 | 0 |
 | Strategy1  | 1, 100 | 0 | 0 | 0 |
 
-The above table reprents two strategies with header row value representing the drop in susceptibility i.e. from  ``s`` it will either drop down to  ``0`` ,  ``s/3`` ,  ``2s/3``  or will remain at  ``s`` . The values 80 and 100  represents delay ie the time after which the government will start taking appropriate measures. The column entries represent the probability values with which the susceptibility will drop down to i.e. for Strategy1 with probability 1 the susceptibility will drop down to  ``0`` from ``s`` after delay of 100 time units. Currently, for this table, the Strategies for people in varying awareness levels is same. It can be different across all three awareness levels. Detailed description is given in code.
+The above table reprents two strategies with header row value representing the drop in susceptibility i.e. from  ``s`` it will either drop down to  ``0`` ,  ``s/3`` ,  ``2s/3``  or will remain at  ``s`` . The values 80 and 100  represents delay ie the time after which the government will start taking appropriate measures and only then there will be a drop in susceptibility. The column entries represent the probability values with which the susceptibility will drop down to i.e. for Strategy1 with probability 1 the susceptibility will drop down to  ``0`` from ``s`` after delay of 100 time units. Currently, for this table, the Strategies for people in varying awareness levels is same. It can be different across all three awareness levels. Detailed description is given in code.
 
 The plots representing the difference in the number of infected individuals is given as follows:
 
