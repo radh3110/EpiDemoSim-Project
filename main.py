@@ -24,6 +24,10 @@ sus[0] = float(readfrom.read(5))  #initial susceptibility value for people in aw
 sus[1] = float(readfrom.read(5))  #initial susceptibility value for people in awareness level 1
 sus[2] = float(readfrom.read(5))  #initial susceptibility value for people in awareness level 2
 
+delay[0] = float(readfrom.read(3)) #delay value for measure2 
+delay[1] = float(readfrom.read(3)) #delay value for measure1 
+delay[2] = float(readfrom.read(4)) #delay value for measure0 
+
 for outer in range(0,3):
     for inner in range (0,length):
         costs[outer][inner] = float(readfrom.read(5))   #costs is taken as a matrix input where each value represents the different cost associated with individual to bring down the suceptibility value at that point
@@ -32,7 +36,6 @@ for outer in range(0,3):
     for inner in range (0,length):
         prob[outer][inner] = float(readfrom.read(5))   #probabilities are also taken as input wherein different probability values represent different strategies.
 
-delay = int(readfrom.read(3))  #delay is stated as the time after which the government starts taking action.
 readfrom.read(1)
 
 varassigning()       #varassigning() is used as data representing agent's basic parameters like workX, workY, age, gender etc is already stored in excel file and we want to use the same data for different strategies
@@ -41,67 +44,67 @@ varassigning()       #varassigning() is used as data representing agent's basic 
 #use either of them as after initialisation the data gets stored in data.xlsx . If you want to use the same data for each simulation run and across strategies than comment initialisation() and use varassigning()
 #if you want differnt data every time you run the simulation, comment varassigning() and use initialisation() instead
 
+#s_phi is the baseline strategy with no intervention
+print "strategy - s_phi"
+strat(plottype, 1)
 
-print "strategy - s0"
-strat(plottype, delay, 1)
 
 
-
-#Here each strategy is takes different inputs for probability and delays representing variations in two strategies.
+#Here each strategy is takes different inputs for probability representing variations in strategies.
 for outer in range(0,3):
     for inner in range (0,length):
         prob[outer][inner] = float(readfrom.read(5))
-delay = int(readfrom.read(3))
+
 
 print "strategy - s1"
-strat(plottype, delay, 2)
+strat(plottype, 2)
 
 
 for outer in range(0,3):
     for inner in range (0,length):
         prob[outer][inner] = float(readfrom.read(5))
-delay = int(readfrom.read(3))
+
 print "strategy - s2"
-strat(plottype, delay, 3)
+strat(plottype, 3)
 
 
 
 for outer in range(0, 3):
     for inner in range(0, length):
         prob[outer][inner] = float(readfrom.read(5))
-delay = int(readfrom.read(3))
+
 print "strategy - s3"
-strat(plottype, delay, 4)
+strat(plottype, 4)
 
 
 
 for outer in range(0, 3):
     for inner in range(0, length):
         prob[outer][inner] = float(readfrom.read(5))
-delay = int(readfrom.read(3))
-print "strategy - s4"
-strat(plottype, delay, 5)
+
+print "strategy - s_m2"
+strat(plottype, 5)
 
 
 
 for outer in range(0, 3):
     for inner in range(0, length):
         prob[outer][inner] = float(readfrom.read(5))
-delay = int(readfrom.read(3))
-print "strategy - s5"
-strat(plottype, delay,6)
+
+print "strategy - s_m1"
+strat(plottype, 6)
 
 
 
 for outer in range(0, 3):
     for inner in range(0, length):
         prob[outer][inner] = float(readfrom.read(5))
-delay = int(readfrom.read(3))
+
 readfrom.close()
-print "strategy - s6"
-strat(plottype, delay,7)
+print "strategy - s_m0"
+strat(plottype, 7)
 
 
-#for strategy s7, we have taken the probability values as those of stratgey zero but only reducing the initial susceptibilities to s/3.
-print "strategy - s7"
-strat(plottype, delay,8)
+#for strategy s_red, we have taken the probability values as those of stratgey zero but only reducing the initial susceptibilities to s/3.
+print "strategy - s_red"
+strat(plottype, 8)
