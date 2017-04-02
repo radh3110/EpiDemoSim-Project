@@ -10,6 +10,7 @@ from gotomarket import *
 from suscep import *
 from ploting import *
 from cost import *
+from measures import *
 import random
 import varassigning
 
