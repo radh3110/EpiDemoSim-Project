@@ -14,7 +14,7 @@ from measures import *
 import random
 import varassigning
 
-def strat(plottype, delay, number):
+def strat(plottype, number):
     gf = 0
     gt = 0
 
