@@ -128,11 +128,17 @@ def strat(plottype, delay, number):
                 print "flag is raised at", j   #government flag is raised at jth time stamp
             #this is to test the strategies based on delay. Government flag is raised meaning government now knows about the infection spread.
             #government time starts a counter. Delay will define after a delay of how many time units will the government take actions even after its already come to the notice of authorities.
-            if gf == 1 and over == 0: #if government flag is one
-                gt += 1               #increment government time
-                if gt == delay:       #if government time is delay
-                    flagraised(people, population, prob,length)  #call the flagraised() function
-                    over = 1
+            if gf == 1: #if government flag is one
+                gt += 1              #increment government time
+                if gt == delay[0]:   #if government time is delay[0]
+                    print gt         #print gt  
+                    measure2(people, population, length, 2)  #call measure2 function
+                if gt == delay[1]:   #if government time is delay[1]
+                    print gt         #print gt 
+                    measure1(people, population, length, 1)  #call measure1 function
+                if gt == delay[2]:   #if government time is delay[2]
+                    print gt         #print gt 
+                    measure0(people, population, length, 0)   #call measure0 function 
 
 
         temparray = recoveringPeople(people, people1 + people2)
