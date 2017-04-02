@@ -33,6 +33,8 @@ As can be seen, the project comprises of a number of python files. I shall brief
 
 7) ``measures.py`` : This file states the measures that help in reduction of susceptibilities when dealing with epidemics.
 
+8) ``data.xlsx`` : The data that we have considered for running the simulation. This data has some static agent properties so that they remain same across simulations.
+
 The ``input.txt`` file takes the input from user. The ``Explanation for Input File`` describes what should be the input and what it means. Kindly go through the same.
 The code can be modified as to meet your requirements.
 
