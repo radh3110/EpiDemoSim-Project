@@ -7,7 +7,6 @@ from infecting import *
 from recovery import *
 from gotohospi import *
 from gotomarket import *
-from suscep import *
 from ploting import *
 from cost import *
 from measures import *
