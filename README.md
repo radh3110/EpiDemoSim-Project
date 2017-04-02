@@ -29,9 +29,9 @@ As can be seen, the project comprises of a number of python files. I shall brief
 
 5) ``strategy.py`` : Defines the main procedure for the simulation we are running.
 
-6) ``suscep.py`` : Calculates the number of people who lowered their susceptibilities.
+6) ``main.py`` : The main file to run the simulation.
 
-7) ``main.py`` : The main file to run the simulation.
+7) ``measures.py`` : This file states the measures that help in reduction of susceptibilities when dealing with epidemics.
 
 The ``input.txt`` file takes the input from user. The ``Explanation for Input File`` describes what should be the input and what it means. Kindly go through the same.
 The code can be modified as to meet your requirements.
@@ -39,19 +39,19 @@ The code can be modified as to meet your requirements.
 ## Running a Sample Program
 With an initial Susceptibility of 0.8 for People in Awareness Level 0, 0.5 for people in Awareness Level one and 0.3 for people in Awareness Level two, we are displaying results of two strategies here: 
 
-| Strategies | 0   | s/3  | 2s/3 | s | Delay
-| -----------|:---:| ----:|----:|----:|----:|
-| Strategy0  | 0 | 1 | 0 | 0 | 70 |
-| Strategy1  | 1 | 0 | 0 | 0 | 70 |
+| Strategies | 0   | s/3  | 2s/3 | s | 
+| -----------|:---:| ----:|----:|----:|
+| Strategy0  | 0 | 1, 80 | 0 | 0 |
+| Strategy1  | 1, 100 | 0 | 0 | 0 |
 
-The above table reprents two strategies with header row value representing the drop in susceptibility i.e. from  ``s`` it will either drop down to  ``0`` ,  ``s/3`` ,  ``2s/3``  or will remain at  ``s`` . The Delay column represents the time delay after which the government will start taking appropriate measures. The column entries represent the probability values with which the susceptibility will drop down to i.e. for Strategy1 with probability 1 the susceptibility will drop down to  ``0`` from ``s`` after delay. Currently, for this table, the Strategies for people in varying awareness levels is same. It can be different across all three awareness levels. Detailed description is given in code.
+The above table reprents two strategies with header row value representing the drop in susceptibility i.e. from  ``s`` it will either drop down to  ``0`` ,  ``s/3`` ,  ``2s/3``  or will remain at  ``s`` . The values 80 and 100  represents delay ie the time after which the government will start taking appropriate measures. The column entries represent the probability values with which the susceptibility will drop down to i.e. for Strategy1 with probability 1 the susceptibility will drop down to  ``0`` from ``s`` after delay. Currently, for this table, the Strategies for people in varying awareness levels is same. It can be different across all three awareness levels. Detailed description is given in code.
 
 The plots representing the difference in the number of infected individuals is given as follows:
 
 ![alt text](https://github.com/radh3110/EpiDemoSim-Project/blob/master/plot.png "Plots showing Difference between two Strategies")
 
 
-The X-axis represents the time in hours and the Y-axis represents the Total Infected Individuals. As can be seen, for``Strategy0``, the total number of Infected Individuals is around ``5700`` while for ``Strategy1`` because Susceptibility drops down to ``0``, the Infected Individuals remains constant to ``1100`` after some time units.
+The X-axis represents the time in hours and the Y-axis represents the Total Infected Individuals. As can be seen, for``Strategy0``, the total number of Infected Individuals is around ``5730`` while for ``Strategy1`` because Susceptibility drops down to ``0``, the Infected Individuals remains constant to ``1502`` after some time units.
 
 ## Authors
 * Radhiya A. Arsekar
